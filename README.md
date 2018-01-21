@@ -22,6 +22,8 @@
     - Add 'position' module to downConfig in build.gradle file.
     - The device must have to have a GPS module.
     
+    The code is as follows:
+    
     ```
         Services.get(PositionService.class).ifPresent(service -> {
             service.positionProperty().addListener((obs, ov, nv) ->
