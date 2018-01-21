@@ -16,3 +16,21 @@
             });
         });
     ```
+2. Accessing GPS:
+    For accessing Position service, we need to -
+    - check if PositionService is present.
+    - Add 'position' module to downConfig in build.gradle file.
+    - The device must have to have a GPS module.
+    
+    ```
+        Services.get(PositionService.class).ifPresent(service -> {
+            service.positionProperty().addListener((obs, ov, nv) ->
+            // enable button and add listener to retrieve coordinates
+            button.setOnAction(e -> {
+                Position position = service.getPosition();
+                MobileApplication.getInstance().showMessage("Latest known GPS coordinates from device:\n" +
+                        position.getLatitude() + ", " + position.getLongitude());
+
+            });
+        });
+    ```
