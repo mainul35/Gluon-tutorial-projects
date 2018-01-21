@@ -8,7 +8,7 @@
     
     The code is as follows:
     
-    ```
+    ```java
         Services.get(DeviceService.class).ifPresent(service2 -> {
             button.setOnAction(ex->{
                 System.out.println("Device Model Name: "+ service2.getModel());
@@ -24,7 +24,7 @@
     
     The code is as follows:
     
-    ```
+    ```java
         Services.get(PositionService.class).ifPresent(service -> {
             service.positionProperty().addListener((obs, ov, nv) ->
             // enable button and add listener to retrieve coordinates
