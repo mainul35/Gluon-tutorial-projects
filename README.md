@@ -35,7 +35,7 @@
             plugins 'display', 'lifecycle', 'statusbar', 'storage', 'position'
         }
     ```
-    - Add the latest dependency in the build.gradle dependencies section.
+    - Add the latest dependency in the build.gradle dependencies section. Note that dependencies will have to be added below the               mainclassname, not inside the buildscript section.
     
     ```
         dependencies {
