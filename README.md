@@ -4,6 +4,13 @@
     For accessing device information we need to -
     - check if DeviceService is present.
     - Add 'device' module to downConfig in build.gradle file.
+    
+    ```
+        downConfig {
+            version = '3.7.0'
+            plugins 'display', 'lifecycle', 'statusbar', 'storage', 'device'
+        }
+    ```
     - The build app must have to be run on any mobile device.
     
     The code is as follows:
@@ -16,10 +23,25 @@
             });
         });
     ```
+    
 2. Accessing GPS:
     For accessing Position service, we need to -
     - check if PositionService is present.
     - Add 'position' module to downConfig in build.gradle file.
+    
+    ```
+        downConfig {
+            version = '3.7.0'
+            plugins 'display', 'lifecycle', 'statusbar', 'storage', 'position'
+        }
+    ```
+    - Add the latest dependency in the build.gradle dependencies section.
+    
+    ```
+        dependencies {
+            compile 'com.gluonhq:charm:4.4.1'
+        }
+    ```
     - The device must have to have a GPS module.
     
     The code is as follows:
